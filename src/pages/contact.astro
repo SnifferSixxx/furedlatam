@@ -1,0 +1,102 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<html lang="es">
+<head>
+    <BaseHead title={`Contacto | ${SITE_TITLE}`} description="Página de contacto para FURED LATAM Milsim & Ops" />
+</head>
+<body>
+    <Header />
+    <main class="contact-main">
+        <h1>Contacto</h1>
+        <p>
+          ¡Nos alegra que quieras contactarnos! Si tienes preguntas sobre FURED LATAM, estás interesado en unirte a nuestro equipo, o simplemente quieres saber más sobre nosotros, no dudes en ponerte en contacto. Completa el siguiente formulario y nos comunicaremos contigo lo antes posible.
+        </p>
+        <br />
+        <h2>Formulario de Contacto</h2>
+        <form
+          action="https://formspree.io/f/xkgjejqv"
+          method="POST"
+          class="contact-form">
+            <label for="email">Tu email:</label>
+            <input type="email" id="email" name="email" placeholder="Tu email" required />
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tu mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        
+        <br />
+        <h2>Mantente Conectado</h2>
+        <p>También puedes encontrarnos en nuestro servidor de Discord: <a href="https://discord.gg/YOUR_DISCORD_LINK" target="_blank" rel="noopener noreferrer">Discord</a></p>
+    </main>
+    <br>
+    <br>
+    <Footer />
+</body>
+</html>
+
+<style>
+    main.contact-main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 2rem;
+        gap: 1.5rem;
+        border-radius: 5px;
+
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: var(--secondary-bg);
+    }
+    label {
+        margin-bottom: 0.2rem;
+        font-weight: bold;
+    }
+    
+    input,
+    textarea {
+        padding: 0.8rem;
+        border-radius: 0.4rem;
+        background-color: #f9f9f9;
+        border: none;
+    }
+    input,
+    textarea {
+        outline: none;
+    }
+
+    textarea {width: 100%;
+      box-sizing: border-box;
+        
+        
+        resize: vertical;
+    }
+
+    textarea { max-width: 100%; }
+    .contact-form button[type="submit"] {
+        align-self: flex-start; 
+        padding: 0.8rem 1.2rem;
+        margin-top: 0.5rem;
+        font-weight: 600;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        letter-spacing: 0.05rem;
+        background-color: #4CAF50; /* Example button color */
+        color: white;
+        border: none;
+        border-radius: 3px;cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: auto;
+    }
+    .contact-form button:hover {
+        background-color: #2c8c30;
+    }
+</style>

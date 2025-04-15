@@ -1,0 +1,109 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<html lang="es">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <section class="hero">
+        <img
+          src="/hero.png"
+          alt="Hero Image"
+          class="hero-image"
+          style="display:none;"
+        /></section>
+      <h1 class="main-title">Bienvenido a FURED LATAM</h1>
+      <section class="intro-text">
+          <p>
+            Somos una comunidad dedicada al Milsim (simulación militar) en Arma Reforger, compuesta por apasionados por el realismo táctico y la camaradería. Aquí, vivirás la emoción y el rigor de las operaciones militares en un entorno desafiante y colaborativo.
+          </p>
+          <p>
+            Únete a nuestro servidor de Discord para más información y comienza tu camino en FURED LATAM.
+          </p>          
+          <a href="https://discord.gg/sWqM8vC6" class="discord-button">Únete a Nuestro Discord</a>
+      </section>
+
+      <section class="mission">
+        <h2>Operación Fénix: Bergamo en Crisis</h2>
+          <p>
+        <strong>Bergamo, una Nación en Ruinas:</strong> Un sorpresivo ataque nuclear ha sumido a Bergamo en el caos, causando millones de víctimas y el magnicidio de su presidente. NORZOVIA, aprovechándose de la tragedia, ha invadido el territorio bajo el pretexto de "restaurar el orden".
+        </p>
+        <p>
+        <strong>Objetivos de FURED en Bergamo:</strong> Con el respaldo de la ONU, la FURED ha sido desplegada en Bergamo con tres objetivos principales:
+          <ul>
+            <li>Intervención humanitaria.</li>
+            <li>Restaurar un gobierno legítimo.</li>
+            <li>Expulsar a las fuerzas invasoras.</li>
+          </ul>
+        </p>
+      </section>
+        <div style="width: 100%; max-width: 1000px; margin: 2rem auto;">
+            <iframe width="100%" height="auto" style="aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/Z9cMZAeA13A?si=umpd28vUgjLoWmVU" title="Reproductor de video de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </main>
+    <Footer />
+  </body>
+  <style scoped>
+    .hero {
+        background-image: url("https://firebasestorage.googleapis.com/v0/b/furedlatam-50a6b.firebasestorage.app/o/reclut%20(1).png?alt=media&token=d20e7d32-4205-4f6b-bceb-0a90c65df3c7");
+        background-size: contain;
+        background-position: center;
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .main-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        text-align: left;
+        padding: 0 1rem;
+    }
+
+     .intro-text {
+        padding: 1rem;
+        margin-bottom: 2rem;
+    }
+    .intro-text p {
+        margin-bottom: 1rem;
+    }
+    .intro-text .discord-button {
+        display: inline-block;
+        background-color: #7289da;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+    .intro-text .discord-button:hover {
+        background-color: #5865f2;
+    }
+    .mission {
+        text-align: left;
+        padding: 1rem;
+        margin-bottom: 2rem;
+    }
+    .mission h2 {
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+    }
+    .mission p {
+        margin-bottom: 0.5rem;
+    }
+    .mission ul {
+        list-style-type: disc;
+        margin-left: 2rem;
+    }
+
+  </style>
+</html>

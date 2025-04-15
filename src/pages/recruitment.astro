@@ -1,0 +1,98 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+import DiscordButton from '../components/DiscordButton.astro';
+
+---
+<html lang="es">
+<head>
+  <BaseHead title={`Recruitment | ${SITE_TITLE}`} description="Join FURED LATAM Milsim & Ops" />
+	</head>
+	<body>
+    <Header />
+    <main class="recruitment-main" >
+      <section class="hero-section">
+        <img
+          src="/hero.png"
+          alt="Hero Image"
+          class="hero-image"
+        />
+      </section>
+
+			<section>
+				<h2>Únete a FURED LATAM</h2>
+				<p>
+					Si estás buscando una experiencia de Milsim auténtica y desafiante en Arma Reforger, FURED LATAM te da la bienvenida. Somos una comunidad unida por la pasión por el realismo táctico y la camaradería. Si crees que tienes lo necesario para formar parte de la fuerza mejor preparada de América Latina, te invitamos a unirte a nuestras filas.
+				</p>
+			</section>
+			<section>
+				<h2 class="section-title">Requisitos para Unirse</h2>
+				<p>Para unirte a FURED LATAM, debes cumplir con los siguientes requisitos:</p>
+				<ul>
+					<li>Poseer una copia legítima de Arma Reforger.</li>
+					<li>Disponer de un micrófono funcional y ser capaz de comunicarte claramente en español.</li>
+					<li>Comprometerte a participar en operaciones y entrenamientos regulares.</li>
+					<li>Demostrar respeto y profesionalismo hacia otros miembros del clan.</li>
+					<li>Aceptar y seguir las reglas y directrices de FURED LATAM.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2 class="section-title">Proceso de Aplicación</h2>
+				<p>El proceso de aplicación consta de los siguientes pasos:</p>
+				<ol>
+					<li>
+            <b>Únete a nuestro Discord:</b> El primer paso para unirte a FURED LATAM es ingresar a nuestro servidor de Discord.
+            <br /><br />
+            <DiscordButton/>
+            <br /><br />
+          </li>
+
+					<li><b>Entrevista:</b> Presenta tu aplicación en el canal de aspirantes, serás invitado a una entrevista con un miembro del equipo de reclutamiento, o puedes solicitar una entrevista directamente ingresando a nuestro servidor FURED LATAM.</li><br />
+					<li><b>Periodo de Prueba:</b> Participarás de una serie de entrenamientos con miembros del clan para evaluar tus habilidades y compatibilidad con nuestro estilo de juego, durante este periodo obtendrás el rango de recluta.</li><br />
+					<li><b>Ingreso definitivo:</b> Si finalizas el entrenamiento, y cuentas con la aprobación de tu instructor, obtendrás el rango de soldado, y con el, el derecho a participar en las operaciones de FURED LATAM.</li><br />
+				</ol>
+			</section>
+      <section class="join-discord">
+				<h2 class="section-title">Únete a nuestro Discord</h2>
+				<p>Para más información sobre el proceso de reclutamiento y para comenzar tu camino en FURED LATAM, únete a nuestro servidor de Discord.</p>
+        <DiscordButton/>
+      </section>      
+    </main>
+    <Footer />
+    <style>
+       main {
+        max-width: 800px;
+      .recruitment-main {
+        padding: 2rem;
+      }
+      .hero-section {
+        margin-bottom: 2rem;
+      }
+
+      .hero-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+      }
+
+    
+
+
+      section {
+        margin-bottom: 2rem;
+      }
+    .main-title {
+        margin-bottom: 2rem;
+    }
+    .join-discord {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    </style>
+  </body>
+</html>

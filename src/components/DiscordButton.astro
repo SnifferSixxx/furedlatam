@@ -1,0 +1,40 @@
+---
+// src/components/DiscordButton.astro
+import DiscordIcon from '../assets/DiscordIcon.svg?raw';
+---
+
+<a href="https://discord.gg/reszVzbDje" class="discord-button" aria-label="Join our Discord">
+    <div class="discord-icon" set:html={DiscordIcon} />
+    <span class="text-button">
+        Unirme ahora
+    </span>
+</a>
+
+<style>
+  .discord-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--accent); /* Use the accent color for the background */
+    color: var(--text-primary); /* Use text-primary for the text color */
+    text-decoration: none;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    gap: 0.5rem;
+  }
+  .discord-button:hover {
+    background-color: var(--accent-hover); /* Change background color on hover */
+    cursor: pointer;
+  }
+
+
+  .discord-icon {
+    display: flex;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .text-button {
+    white-space: nowrap;
+  }
+</style>

@@ -1,0 +1,77 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<html lang="es">
+  <head>
+    <BaseHead
+      title={`${SITE_TITLE} - Sobre Nosotros`}
+      description="Conoce más sobre FURED LATAM Milsim & Ops"
+    />
+    <style>
+      main {
+        padding: 2rem;
+        margin: 0 auto;
+        max-width: 800px;
+      }
+
+      section {
+        padding: 1rem;
+      }
+
+      h1,
+      h2 {
+        margin-bottom: 1rem;
+      }
+
+      p {
+        line-height: 1.6;
+      }
+
+      ul {
+        list-style: disc;
+        margin-left: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <section>
+        <h2>Sobre Nosotros</h2>
+        <p>
+          Somos un grupo de entusiastas del Milsim (simulación militar) provenientes
+          de diversas partes de Latinoamérica y el mundo hispanohablante. Nuestra
+          comunidad está unida por una pasión compartida por el realismo táctico y
+          la camaradería.
+        </p>
+        <p>
+          Entre nuestros miembros, contamos con personas con experiencia militar,
+          quienes aportan su conocimiento y experiencia para enriquecer nuestras
+          operaciones y entrenamientos.
+        </p>
+        <p>
+          Nos esforzamos por crear un entorno que equilibre la disciplina y el
+          rigor con el disfrute y la diversión, fomentando un ambiente respetuoso
+          y de apoyo mutuo.
+        </p>
+      </section>
+      <section>
+        <h2>Nuestros Valores</h2>
+        <p>
+          Nos regimos por:
+        </p>
+        <ul>
+          <li><strong>Profesionalismo</strong></li>
+          <li><strong>Compromiso</strong></li>
+          <li><strong>Realismo</strong></li>
+          <li><strong>Trabajo en Equipo</strong></li>
+        </ul>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
